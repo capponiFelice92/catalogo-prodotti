@@ -1233,3 +1233,4 @@ Caused by: com.mysql.cj.exceptions.CJException: You have an error in your SQL sy
 	... 116 common frames omitted
 
 2021-02-15 13:52:40.462  WARN 16060 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-15 13:55:06.727  WARN 8432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
