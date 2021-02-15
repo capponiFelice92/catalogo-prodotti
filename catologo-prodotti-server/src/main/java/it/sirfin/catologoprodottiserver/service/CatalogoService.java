@@ -1,14 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.sirfin.catologoprodottiserver.service;
 
-/**
- *
- * @author Hp Desktop
- */
-public class CatalogoService {
-    
+import it.sirfin.catologoprodottiserver.model.Prodotto;
+import java.util.List;
+
+public interface CatalogoService {
+
+    List<Prodotto> inserisciProdotto(Prodotto p);
+
+    void svuotaTabella();
+
+    List<Prodotto> trovaProdotti();
+
+    List<Prodotto> cancellaProdotto(Prodotto p);
+
 }
