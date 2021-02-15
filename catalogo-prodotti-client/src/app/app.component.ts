@@ -1,4 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Prodotto } from './prodotto';
+import { ReqProdottoDto } from './req-prodotto-dto';
+import { ResProdottoDto } from './res-prodotto-dto';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +11,51 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'catalogo-prodotti-client';
+  prodotto: Prodotto;
+  catalogoVisualizzato: Prodotto[];
 
-  
+  url = "http://localhost:8080/";
+
+  constructor(private http: HttpClient) { }
+
+  aggiungi() {
+    let oss: Observable<ResProdottoDto>
+    oss = this.http.post<ResProdottoDto>(this.url + "", this.prodotto)
+    oss.subscribe(risp => {
+      this.catalogoVisualizzato = risp.catalogoProdotti,
+        this.prodotto = new Prodotto();
+    })
+  }
+
+  cancella(prod: Prodotto) {
+    let oss: Observable<ResProdottoDto>
+    oss = this.http.post<ResProdottoDto>(this.url + "", this.prodotto)
+    oss.subscribe(risp => {
+      this.catalogoVisualizzato = risp.catalogoProdotti;
+    });
+  }
+
+  aggiorna(){
+  let oss: Observable<ResProdottoDto> = this.http
+      .get<ResProdottoDto>(this.url + "");
+    oss.subscribe(risp => {
+      this.catalogoVisualizzato = risp.catalogoProdotti;
+    });
+   }
+
+  svuota(){
+    let oss: Observable<ResProdottoDto> = this.http
+        .get<ResProdottoDto>(this.url + "");
+      oss.subscribe(risp => {
+        this.catalogoVisualizzato = risp.catalogoProdotti;
+      });
+     }
+
+    
+
+
+
+
+
+
 }
