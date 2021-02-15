@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "catalogo-prodotti-client"
+  "defaultProject": "catalogo-prodotti-client",
+  "cli": {
+    "analytics": false
+  }
 }

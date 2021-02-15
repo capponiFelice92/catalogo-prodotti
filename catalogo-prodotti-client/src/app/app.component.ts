@@ -11,7 +11,7 @@ import { ResProdottoDto } from './res-prodotto-dto';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  prodotto: Prodotto;
+  prodotto: Prodotto = new Prodotto();
   catalogoVisualizzato: Prodotto[];
 
   url = "http://localhost:8080/";
@@ -20,7 +20,7 @@ export class AppComponent {
 
   aggiungi() {
     let oss: Observable<ResProdottoDto>
-    oss = this.http.post<ResProdottoDto>(this.url + "inserisci-prodotto", this.prodotto)
+    oss = this.http.post<ResProdottoDto>(this.url + "inserisci-prodotti", this.prodotto)
     oss.subscribe(risp => {
       this.catalogoVisualizzato = risp.catalogoProdotti,
         this.prodotto = new Prodotto();
