@@ -1,10 +1,12 @@
 package it.sirfin.catologoprodottiserver.controller;
 
 import it.sirfin.catologoprodottiserver.dto.ListaProdottiDto;
+import it.sirfin.catologoprodottiserver.dto.RichiestaProdottoDto;
 import it.sirfin.catologoprodottiserver.model.Prodotto;
 import it.sirfin.catologoprodottiserver.service.CatalogoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,8 +27,8 @@ public class CatalogoController {
     @RequestMapping("/inserisci-prodotto")
     @ResponseBody
 
-    public ListaProdottiDto inserisciProdotto(Prodotto p) {
-        catalogoService.inserisciProdotto(p);
+    public ListaProdottiDto inserisciProdotto(@RequestBody RichiestaProdottoDto dto) {
+        catalogoService.inserisciProdotto(dto.getProdotto());
         return new ListaProdottiDto(catalogoService.trovaProdotti());
 
     }

@@ -19,10 +19,13 @@ export class AppComponent {
   constructor(private http: HttpClient) { }
 
   aggiungi() {
+    let dtoReq: ReqProdottoDto = new ReqProdottoDto();
+    dtoReq.prodotto = this.prodotto;
+    console.log(dtoReq);
     let oss: Observable<ResProdottoDto>
-    oss = this.http.post<ResProdottoDto>(this.url + "inserisci-prodotti", this.prodotto)
+    oss = this.http.post<ResProdottoDto>(this.url + "inserisci-prodotto", dtoReq)
     oss.subscribe(risp => {
-      this.catalogoVisualizzato = risp.catalogoProdotti,
+      this.catalogoVisualizzato = risp.listaProdotti,
         this.prodotto = new Prodotto();
     })
   }
@@ -31,7 +34,7 @@ export class AppComponent {
     let oss: Observable<ResProdottoDto>
     oss = this.http.post<ResProdottoDto>(this.url + "cancella-prodotto", this.prodotto)
     oss.subscribe(risp => {
-      this.catalogoVisualizzato = risp.catalogoProdotti;
+      this.catalogoVisualizzato = risp.listaProdotti;
     });
   }
 
@@ -39,7 +42,8 @@ export class AppComponent {
     let oss: Observable<ResProdottoDto> = this.http
       .get<ResProdottoDto>(this.url + "trova-prodotti");
     oss.subscribe(risp => {
-      this.catalogoVisualizzato = risp.catalogoProdotti;
+      this.catalogoVisualizzato = risp.listaProdotti;
+      console.log(risp.listaProdotti);
     });
   }
 
@@ -47,7 +51,7 @@ export class AppComponent {
     let oss: Observable<ResProdottoDto> = this.http
       .get<ResProdottoDto>(this.url + "svuota-catalogo");
     oss.subscribe(risp => {
-      this.catalogoVisualizzato = risp.catalogoProdotti;
+      this.catalogoVisualizzato = risp.listaProdotti;
     });
   }
 
