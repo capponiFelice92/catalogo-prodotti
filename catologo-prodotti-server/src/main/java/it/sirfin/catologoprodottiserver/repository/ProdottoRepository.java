@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package it.sirfin.catologoprodottiserver.model;
+package it.sirfin.catologoprodottiserver.repository;
 
 /**
  *
  * @author Hp Desktop
  */
-public class Prodotti {
+public class ProdottoRepository {
     
 }
