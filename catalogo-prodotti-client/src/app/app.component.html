@@ -1,21 +1,21 @@
-<input type="text" [(ngModel)] = "prodotto.descrizione">
-<input type="number" [(ngModel)] = "prodotto.prezzo">
+<input type="text" [(ngModel)]="prodotto.descrizione">
+<input type="number" [(ngModel)]="prodotto.prezzo">
 <br>
 <br>
-<button (click) = "aggiungi()">Aggiungi</button>
-<button (click) = "svuota()">Svuota catalogo</button>
-<button (click) = "aggiorna()">Aggiorna catalogo</button>
+<button (click)="aggiungi()">Aggiungi</button>
+<button (click)="svuota()">Svuota catalogo</button>
+<button (click)="aggiorna()">Aggiorna catalogo</button>
 <table>
   <tr>
     <th>Id</th>
     <th>Descrizione</th>
-    <th>Prezzo</th> 
+    <th>Prezzo</th>
     <th>Azioni</th>
   </tr>
-  <tr *ngFor= "let c of catalogoVisualizzato">
+  <tr *ngFor="let c of catalogoVisualizzato">
     <td>{{c.id}} </td>
     <td>{{c.descrizione}} </td>
     <td>{{c.prezzo}}</td>
-<td><button (click) = "cancella(c)">Cancella</button></td>
+    <td><button (click)="cancella(c)">Cancella</button></td>
   </tr>
 </table>

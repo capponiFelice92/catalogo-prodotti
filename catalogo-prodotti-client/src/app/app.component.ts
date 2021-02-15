@@ -20,7 +20,7 @@ export class AppComponent {
 
   aggiungi() {
     let oss: Observable<ResProdottoDto>
-    oss = this.http.post<ResProdottoDto>(this.url + "", this.prodotto)
+    oss = this.http.post<ResProdottoDto>(this.url + "inserisci-prodotto", this.prodotto)
     oss.subscribe(risp => {
       this.catalogoVisualizzato = risp.catalogoProdotti,
         this.prodotto = new Prodotto();
@@ -29,29 +29,29 @@ export class AppComponent {
 
   cancella(prod: Prodotto) {
     let oss: Observable<ResProdottoDto>
-    oss = this.http.post<ResProdottoDto>(this.url + "", this.prodotto)
+    oss = this.http.post<ResProdottoDto>(this.url + "cancella-prodotto", this.prodotto)
     oss.subscribe(risp => {
       this.catalogoVisualizzato = risp.catalogoProdotti;
     });
   }
 
-  aggiorna(){
-  let oss: Observable<ResProdottoDto> = this.http
-      .get<ResProdottoDto>(this.url + "");
+  aggiorna() {
+    let oss: Observable<ResProdottoDto> = this.http
+      .get<ResProdottoDto>(this.url + "trova-prodotti");
     oss.subscribe(risp => {
       this.catalogoVisualizzato = risp.catalogoProdotti;
     });
-   }
+  }
 
-  svuota(){
+  svuota() {
     let oss: Observable<ResProdottoDto> = this.http
-        .get<ResProdottoDto>(this.url + "");
-      oss.subscribe(risp => {
-        this.catalogoVisualizzato = risp.catalogoProdotti;
-      });
-     }
+      .get<ResProdottoDto>(this.url + "svuota-catalogo");
+    oss.subscribe(risp => {
+      this.catalogoVisualizzato = risp.catalogoProdotti;
+    });
+  }
 
-    
+
 
 
 
