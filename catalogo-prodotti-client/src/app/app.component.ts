@@ -30,9 +30,11 @@ export class AppComponent {
     })
   }
 
-  cancella(prod: Prodotto) {
+  cancella(inx: number) {
+    let dtoReq: ReqProdottoDto = new ReqProdottoDto();
+    dtoReq.prodotto = this.catalogoVisualizzato[inx];
     let oss: Observable<ResProdottoDto>
-    oss = this.http.post<ResProdottoDto>(this.url + "cancella-prodotto", this.prodotto)
+    oss = this.http.post<ResProdottoDto>(this.url + "cancella-prodotto", dtoReq)
     oss.subscribe(risp => {
       this.catalogoVisualizzato = risp.listaProdotti;
     });

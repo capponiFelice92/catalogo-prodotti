@@ -35,8 +35,8 @@ public class CatalogoController {
 
     @RequestMapping("/cancella-prodotto")
     @ResponseBody
-    public ListaProdottiDto cancellaProdotto(Prodotto p) {
-        catalogoService.cancellaProdotto(p);
+    public ListaProdottiDto cancellaProdotto(@RequestBody RichiestaProdottoDto dto) {
+        catalogoService.cancellaProdotto(dto.getProdotto());
         return new ListaProdottiDto(catalogoService.trovaProdotti());
 
     }

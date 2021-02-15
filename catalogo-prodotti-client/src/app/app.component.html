@@ -12,10 +12,10 @@
     <th>Prezzo</th>
     <th>Azioni</th>
   </tr>
-  <tr *ngFor="let c of catalogoVisualizzato">
+  <tr *ngFor="let c of catalogoVisualizzato; index as i">
     <td>{{c.id}} </td>
     <td>{{c.descrizione}} </td>
     <td>{{c.prezzo}}</td>
-    <td><button (click)="cancella(c)">Cancella</button></td>
+    <td><button (click)="cancella(i)">Cancella</button></td>
   </tr>
 </table>
