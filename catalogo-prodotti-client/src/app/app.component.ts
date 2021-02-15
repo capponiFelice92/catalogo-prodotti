@@ -12,7 +12,7 @@ import { ResProdottoDto } from './res-prodotto-dto';
 })
 export class AppComponent {
   prodotto: Prodotto = new Prodotto();
-  catalogoVisualizzato: Prodotto[];
+  catalogoVisualizzato: Prodotto[] = [];
 
   url = "http://localhost:8080/";
 
