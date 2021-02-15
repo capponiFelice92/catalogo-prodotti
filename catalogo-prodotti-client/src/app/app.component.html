@@ -1,11 +1,12 @@
-<input type="text" [(ngModel)]="prodotto.descrizione">
-<input type="number" [(ngModel)]="prodotto.prezzo">
+<input type="text" [(ngModel)]="prodotto.descrizione">Descrizione
+<br>
+<input type="number" [(ngModel)]="prodotto.prezzo">Prezzo
 <br>
 <br>
 <button (click)="aggiungi()">Aggiungi</button>
 <button (click)="svuota()">Svuota catalogo</button>
 <button (click)="aggiorna()">Aggiorna catalogo</button>
-<table>
+<table *ngIf="catalogoVisualizzato.length > 0">
   <tr>
     <th>Id</th>
     <th>Descrizione</th>

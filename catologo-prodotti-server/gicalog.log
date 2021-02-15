@@ -1639,3 +1639,64 @@ java.lang.IllegalArgumentException: Entity must not be null!
 2021-02-15 19:25:42.717 DEBUG 1760 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
 2021-02-15 19:25:42.721 DEBUG 1760 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
 2021-02-15 19:26:11.459 DEBUG 1760 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:14:47.341  WARN 16224 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-15 20:51:21.935  WARN 1436 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-15 20:51:46.114 DEBUG 1436 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:51:48.476 DEBUG 1436 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_0_0_, prodotto0_.descrizione as descrizi2_0_0_, prodotto0_.prezzo as prezzo3_0_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-02-15 20:51:48.480 TRACE 1436 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [14]
+2021-02-15 20:51:48.499 DEBUG 1436 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-02-15 20:51:48.499 TRACE 1436 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [14]
+2021-02-15 20:51:48.506 DEBUG 1436 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:51:48.508 DEBUG 1436 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:51:59.221 DEBUG 1436 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-02-15 20:51:59.222 DEBUG 1436 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-02-15 20:51:59.227 DEBUG 1436 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : insert into prodotto (descrizione, prezzo, id) values (?, ?, ?)
+2021-02-15 20:51:59.228 TRACE 1436 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pasta]
+2021-02-15 20:51:59.229 TRACE 1436 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [1.0]
+2021-02-15 20:51:59.229 TRACE 1436 --- [http-nio-8080-exec-5] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [16]
+2021-02-15 20:51:59.234 DEBUG 1436 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:51:59.236 DEBUG 1436 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:52:45.319 DEBUG 1436 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-02-15 20:52:45.320 DEBUG 1436 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-02-15 20:52:45.323 DEBUG 1436 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : insert into prodotto (descrizione, prezzo, id) values (?, ?, ?)
+2021-02-15 20:52:45.323 TRACE 1436 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Pane]
+2021-02-15 20:52:45.324 TRACE 1436 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [0.45]
+2021-02-15 20:52:45.324 TRACE 1436 --- [http-nio-8080-exec-7] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [17]
+2021-02-15 20:52:45.327 DEBUG 1436 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:52:45.329 DEBUG 1436 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:52:48.205 DEBUG 1436 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:52:50.518 DEBUG 1436 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:53:26.866 DEBUG 1436 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:53:30.944 DEBUG 1436 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:53:31.825 DEBUG 1436 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:53:33.008 DEBUG 1436 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-02-15 20:53:33.009 DEBUG 1436 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-02-15 20:53:33.012 DEBUG 1436 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into prodotto (descrizione, prezzo, id) values (?, ?, ?)
+2021-02-15 20:53:33.013 TRACE 1436 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [null]
+2021-02-15 20:53:33.013 TRACE 1436 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [0.0]
+2021-02-15 20:53:33.013 TRACE 1436 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [18]
+2021-02-15 20:53:33.018 DEBUG 1436 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:53:33.020 DEBUG 1436 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:54:38.174 DEBUG 1436 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:55:30.707 DEBUG 1436 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:55:34.871 DEBUG 1436 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:55:39.606 DEBUG 1436 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:55:44.915 DEBUG 1436 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select prodotto0_.id as id1_0_0_, prodotto0_.descrizione as descrizi2_0_0_, prodotto0_.prezzo as prezzo3_0_0_ from prodotto prodotto0_ where prodotto0_.id=?
+2021-02-15 20:55:44.916 TRACE 1436 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [18]
+2021-02-15 20:55:44.917 DEBUG 1436 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : delete from prodotto where id=?
+2021-02-15 20:55:44.918 TRACE 1436 --- [http-nio-8080-exec-8] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [18]
+2021-02-15 20:55:44.920 DEBUG 1436 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:55:44.923 DEBUG 1436 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:55:57.309 DEBUG 1436 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select next_val as id_val from hibernate_sequence for update
+2021-02-15 20:55:57.311 DEBUG 1436 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : update hibernate_sequence set next_val= ? where next_val=?
+2021-02-15 20:55:57.315 DEBUG 1436 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : insert into prodotto (descrizione, prezzo, id) values (?, ?, ?)
+2021-02-15 20:55:57.315 TRACE 1436 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Prosciutto]
+2021-02-15 20:55:57.315 TRACE 1436 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [DOUBLE] - [1.58]
+2021-02-15 20:55:57.316 TRACE 1436 --- [http-nio-8080-exec-9] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [19]
+2021-02-15 20:55:57.319 DEBUG 1436 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:55:57.322 DEBUG 1436 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:56:04.869 DEBUG 1436 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:56:12.991 DEBUG 1436 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : delete from prodotto
+2021-02-15 20:56:12.994 DEBUG 1436 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:56:15.001 DEBUG 1436 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_
+2021-02-15 20:56:23.255 DEBUG 1436 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select prodotto0_.id as id1_0_, prodotto0_.descrizione as descrizi2_0_, prodotto0_.prezzo as prezzo3_0_ from prodotto prodotto0_

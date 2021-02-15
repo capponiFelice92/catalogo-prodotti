@@ -16,7 +16,9 @@ export class AppComponent {
 
   url = "http://localhost:8080/";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.aggiorna();
+   }
 
   aggiungi() {
     let dtoReq: ReqProdottoDto = new ReqProdottoDto();
