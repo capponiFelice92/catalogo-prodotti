@@ -1,9 +1,9 @@
 
-package it.sirfin.catologoprodottiserver.serviceimpl;
+package it.sirfin.catalogoprodottiserver.serviceimpl;
 
-import it.sirfin.catologoprodottiserver.model.Prodotto;
-import it.sirfin.catologoprodottiserver.repository.ProdottoRepository;
-import it.sirfin.catologoprodottiserver.service.CatalogoService;
+import it.sirfin.catalogoprodottiserver.model.Prodotto;
+import it.sirfin.catalogoprodottiserver.repository.ProdottoRepository;
+import it.sirfin.catalogoprodottiserver.service.CatalogoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

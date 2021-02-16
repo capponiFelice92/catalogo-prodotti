@@ -1,6 +1,6 @@
-package it.sirfin.catologoprodottiserver.service;
+package it.sirfin.catalogoprodottiserver.service;
 
-import it.sirfin.catologoprodottiserver.model.Prodotto;
+import it.sirfin.catalogoprodottiserver.model.Prodotto;
 import java.util.List;
 
 public interface CatalogoService {

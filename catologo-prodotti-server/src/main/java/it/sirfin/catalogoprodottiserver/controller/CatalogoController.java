@@ -1,9 +1,8 @@
-package it.sirfin.catologoprodottiserver.controller;
+package it.sirfin.catalogoprodottiserver.controller;
 
-import it.sirfin.catologoprodottiserver.dto.ListaProdottiDto;
-import it.sirfin.catologoprodottiserver.dto.RichiestaProdottoDto;
-import it.sirfin.catologoprodottiserver.model.Prodotto;
-import it.sirfin.catologoprodottiserver.service.CatalogoService;
+import it.sirfin.catalogoprodottiserver.dto.ListaProdottiDto;
+import it.sirfin.catalogoprodottiserver.dto.RichiestaProdottoDto;
+import it.sirfin.catalogoprodottiserver.service.CatalogoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,5 +1,5 @@
 
-package it.sirfin.catologoprodottiserver.model;
+package it.sirfin.catalogoprodottiserver.model;
 
 import java.io.Serializable;
 import javax.persistence.Column;

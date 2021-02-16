@@ -1,6 +1,6 @@
-package it.sirfin.catologoprodottiserver.dto;
+package it.sirfin.catalogoprodottiserver.dto;
 
-import it.sirfin.catologoprodottiserver.model.Prodotto;
+import it.sirfin.catalogoprodottiserver.model.Prodotto;
 import java.util.List;
 
 public class ListaProdottiDto {

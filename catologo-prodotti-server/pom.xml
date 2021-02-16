@@ -11,7 +11,7 @@
 	<groupId>it.sirfin</groupId>
 	<artifactId>catologo-prodotti-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>catologo-prodotti-server</name>
+	<name>catalogo-prodotti-server</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
